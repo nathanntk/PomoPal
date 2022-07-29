@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>PomoPal</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <main class="app">
+
+      <div class="navigation-bar">
+          <button id="js-logo" class="logo">Pomodoro Pal</button>
+          <button id="js-timers" class="timers">Timers</button>
+          <button id="js-flash-cards" class="flash-cards">Flashcards</button>
+          <button id="js-notes" class="notes">Notes</button>
+          <button id="js-login" class="login">Login</button>
+          <button id="js-register" class="register">Register</button>
+      </div>  
+
+      <div class="timer">
+          <div class="button-group mode-buttons" id="js-mode-buttons">
+              <button data-mode="pomodoro" class="button active mode-button" id="js-pomodoro">
+                  Pomodoro
+              </button>
+              <button data-mode="shortBreak" class="button mode-button" id="js-short-break">
+                  Short break
+              </button>
+              <button data-mode="longBreak" class="button mode-button" id="js-long-break">
+                  Long break
+              </button>
+          </div>         
+      
+          <div class="clock" id="js-clock">
+              <span id="js-minutes">25</span>
+              <span class="separator">:</span>
+              <span id="js-seconds">00</span>
+          </div>
+
+          <button class="main-button" data-action="start" id="js-btn">
+              Start
+          </button>
+
+      </div>
+
+    </main>
+
+  <div class="hidden">
+      <audio src="pomopal/public/sounds_chime-sound.mp3" data-sound="pomodoro"></audio>
+      <audio src="pomopal/public/sounds_break-chime.mp3" data-sound="shortBreak"></audio>
+      <audio src="pomopal/public/sounds_break-chime.mp3" data-sound="longBreak"></audio>
+  </div>
+    
+  </body>
+</html>
